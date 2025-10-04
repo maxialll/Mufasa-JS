@@ -35,7 +35,7 @@
 <body>
     <h1>MUFASA GORDO PANZON</h1>
                 <pre>(=^･ω･^=)</pre>
-                <button id="btnGato" style="margin-top:2rem;padding:1.2rem 1.2rem;font-size:1.1rem;border-radius:50%;border:none;background:#e53935;color:#111;text-transform:uppercase;cursor:pointer;width:70px;height:70px;display:flex;align-items:center;justify-content:center;">PRESIONA</button>
+                <button id="btnGato" style="margin-top:2rem;padding:1rem 2.5rem;font-size:1.1rem;border-radius:1.5rem;border:none;background:#b71c1c;color:#111;text-transform:uppercase;cursor:pointer;min-width:120px;">PRESIONA</button>
                 <div id="contenedorGato" style="margin-top:2rem;"></div>
                 <script>
                     const btnGato = document.getElementById('btnGato');
@@ -52,9 +52,9 @@
                                                     `;
                                             } else if (clickCount === 2) {
                                                     const textoOferta = document.getElementById('textoOferta');
-                                                    if (textoOferta) {
-                                                        textoOferta.innerHTML = '<span style="font-size:1.1rem;color:#b71c1c;font-weight:bold;">seco de gato en oferta :)</span>';
-                                                    }
+                                                                            if (textoOferta) {
+                                                                                textoOferta.innerHTML = '<span style="font-size:1.1rem;color:#111;font-weight:bold;text-transform:uppercase;">seco de gato en oferta :)</span>';
+                                                                            }
                                             }
                     });
                 </script>
