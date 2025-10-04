@@ -43,11 +43,19 @@
                     let clickCount = 0;
                     btnGato.addEventListener('click', () => {
                         clickCount++;
-                        if (clickCount === 1) {
-                            contenedor.innerHTML = '<img src="mufasa.webp" alt="Foto de mi gato" style="max-width:320px;width:100%;border-radius:1rem;box-shadow:0 2px 12px rgba(0,0,0,0.10);">';
-                        } else if (clickCount === 2) {
-                            contenedor.innerHTML += '<div style="margin-top:1rem;font-size:1.3rem;color:#b71c1c;font-weight:bold;">seco de gato en oferta</div>';
-                        }
+                                            if (clickCount === 1) {
+                                                    contenedor.innerHTML = `
+                                                        <div style="display:flex;align-items:center;gap:1rem;">
+                                                            <img src="mufasa.webp" alt="Foto de mi gato" style="max-width:100px;width:100px;height:auto;border-radius:1rem;box-shadow:0 2px 12px rgba(0,0,0,0.10);">
+                                                            <div id="textoOferta"></div>
+                                                        </div>
+                                                    `;
+                                            } else if (clickCount === 2) {
+                                                    const textoOferta = document.getElementById('textoOferta');
+                                                    if (textoOferta) {
+                                                        textoOferta.innerHTML = '<span style="font-size:1.1rem;color:#b71c1c;font-weight:bold;">seco de gato en oferta :)</span>';
+                                                    }
+                                            }
                     });
                 </script>
 
