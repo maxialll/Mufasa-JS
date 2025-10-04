@@ -35,12 +35,16 @@
 <body>
     <h1>MUFASA GORDO PANZON</h1>
                 <pre>(=^･ω･^=)</pre>
-                <button id="btnGato" style="margin-top:2rem;padding:1rem 2.5rem;font-size:1.1rem;border-radius:1.5rem;border:none;background:#b71c1c;color:#111;text-transform:uppercase;cursor:pointer;min-width:120px;">PRESIONA</button>
+                    <div style="display:flex;align-items:center;gap:1rem;margin-top:2rem;">
+                      <button id="btnGato" style="padding:1rem 2.5rem;font-size:1.1rem;border-radius:1.5rem;border:none;background:#b71c1c;color:#111;text-transform:uppercase;cursor:pointer;min-width:120px;">PRESIONA</button>
+                      <span id="otraVez" style="font-size:1.1rem;color:#222;font-weight:bold;display:none;">OTRA VEZ</span>
+                    </div>
                 <div id="contenedorGato" style="margin-top:2rem;"></div>
                 <script>
                     const btnGato = document.getElementById('btnGato');
                     const contenedor = document.getElementById('contenedorGato');
                     let clickCount = 0;
+                        const otraVez = document.getElementById('otraVez');
                     btnGato.addEventListener('click', () => {
                         clickCount++;
                                             if (clickCount === 1) {
@@ -50,11 +54,13 @@
                                                             <div id="textoOferta"></div>
                                                         </div>
                                                     `;
+                                if (otraVez) otraVez.style.display = 'inline';
                                             } else if (clickCount === 2) {
                                                     const textoOferta = document.getElementById('textoOferta');
                                                                             if (textoOferta) {
                                                                                 textoOferta.innerHTML = '<span style="font-size:1.1rem;color:#111;font-weight:bold;text-transform:uppercase;">seco de gato en oferta :)</span>';
                                                                             }
+                                if (otraVez) otraVez.style.display = 'none';
                                             }
                     });
                 </script>
